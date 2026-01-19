@@ -11,7 +11,6 @@ from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKe
 from youtubesearchpython import VideosSearch
 from aiogram.client.session.aiohttp import AiohttpSession
 
-
 import Spotify_API
 
 
@@ -22,8 +21,6 @@ session = AiohttpSession(proxy='http://proxy.server:3128')
 dp = Dispatcher()
 
 
-
-# Старт бота
 @dp.message(CommandStart())
 async def start_bot(message: Message) -> None:
     await message.answer(f"👋 Привет, {html.bold(message.from_user.full_name)}! 👋\n"
